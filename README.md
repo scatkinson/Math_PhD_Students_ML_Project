@@ -37,7 +37,7 @@ Following webscraping, the collected data were processed and cleaned in [this no
 
 ## 3. EDA<a id='3._EDA'></a>
 
-Exploratory data analysis is performed in [this notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/MathPhD_EDA.ipynb), and further data analysis is performed in [this notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Data%20Storytelling.ipynb).  The [report](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report.pdf) provides an account of how this analysis was incorporated into the project.  As mentioned in the [introduction]<a id='1._Introduction'></a>, we will produce two classification models to predict whether or not a mathematics faculty candidate will produce at least 2 or 5 PhD graduates. The following boxplot for the number of students produced in 20 years was one of the more useful plots because it provided a nice guide for which thresholds for the number of students produced to use in our predictions. 
+Exploratory data analysis is performed in [this notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/MathPhD_EDA.ipynb), and further data analysis is performed in [this notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Data%20Storytelling.ipynb).  The [report](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report.pdf) provides an account of how this analysis was incorporated into the project.  As mentioned in the [introduction](#1._Introduction), we will produce two classification models to predict whether or not a mathematics faculty candidate will produce at least 2 or 5 PhD graduates. The following boxplot for the number of students produced in 20 years was one of the more useful plots because it provided a nice guide for which thresholds for the number of students produced to use in our predictions. 
 
 ![Boxplot for number of students in 20 years.](Report/boxplot.jpeg "Boxplot for number of students in 20 years")
 
@@ -51,11 +51,11 @@ We also perform logistic regression analysis to get an idea of the influence of 
 
 ## 4. Preprocessing<a id='4._Preprocessing'></a>
 
-The preprocessing steps can be found in [this notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/MathPhD%20Preprocessing%20and%20Modeling.ipynb).  These steps include making target variables for predicting $\geq 2$ and $\geq 5$ students, getting dummy variables for the School variable, and producing indicator variables for subject areas.
+The preprocessing steps can be found in [this notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/MathPhD%20Preprocessing%20and%20Modeling.ipynb).  These steps include making target variables for predicting at least 2 and at least 5 students, getting dummy variables for the School variable, and producing indicator variables for subject areas.
 
 ## 5. Modeling<a id='5._Modeling'></a>
 
-The modeling steps are performed in the same [notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/MathPhD%20Preprocessing%20and%20Modeling.ipynb) as the preprocessing steps.  For each target variable, we performed a 75/25 stratified train-test-split followed by a grid search/random search cross-validation for four classifiers: `RandomForestClassifier`, `AdaBoostClassifier`, `GradientBoostingClassifier`, and `MLPClassifier`.  See the [report](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report.pdf) to view the results of these cross-validations.  Using the hyperparameters selected by our cross-validations, we then set out to tune the thresholds based on the usage of our model.  Both uses of the Screen and Highlighter models justify heavy emphasis on positive precision.  The following precision-recall curves indicate the selected thresholds for both models.
+The modeling steps are performed in the same [notebook](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/MathPhD%20Preprocessing%20and%20Modeling.ipynb) as the preprocessing steps.  For each target variable, we perform a 75/25 stratified train-test-split followed by a grid search/random search cross-validation for four classifiers: `RandomForestClassifier`, `AdaBoostClassifier`, `GradientBoostingClassifier`, and `MLPClassifier`.  See the [report](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report.pdf) to view the results of these cross-validations.  Using the hyperparameters selected by our cross-validations, we then set out to tune the thresholds based on the usage of our model.  Both uses of the Screen and Highlighter models justify heavy emphasis on positive precision.  The following precision-recall curves indicate the selected thresholds for both models.
 
 ![Precision-recall curve for Screen ($\geq 2$) model](Report/Pipeline_precision_recall_2.jpeg "Precision-recall curve for screen ($\geq 2$) model")
 
@@ -69,6 +69,6 @@ The confusion matrices for these estimators and thresholds can also be found in 
 
 We provide an account of the process and results of this project in the [report](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report.pdf).  A [slide version](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report_Slides_webversion.pdf) of the report is also available.
 
-### Acknowledgment:
+### Acknowledgment
 
 I would like to thank my Springboard mentor Ben Bell for helpful guidance during the completion of this project.
