@@ -68,7 +68,3 @@ The confusion matrices for these estimators and thresholds can also be found in 
 ## 6. Report<a id='7._Report'></a>
 
 We provide an account of the process and results of this project in the [report](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report.pdf).  A [slide version](https://github.com/scatkinson/Math_PhD_Students_ML_Project/blob/main/Report/Math_PhD_Students_ML_Project_Report_Slides_webversion.pdf) of the report is also available.
-
-### Acknowledgment
-
-I would like to thank my Springboard mentor Ben Bell for helpful guidance during the completion of this project.
